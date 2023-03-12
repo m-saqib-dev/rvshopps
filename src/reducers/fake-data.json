@@ -1,0 +1,35 @@
+{
+    "products": [
+      {
+        "productImg": "https://example.com/product1.jpg",
+        "productName": "Product 1",
+        "productDescription": "This is the description for product 1.",
+        "productPrice": 9.99
+      },
+      {
+        "productImg": "https://example.com/product2.jpg",
+        "productName": "Product 2",
+        "productDescription": "This is the description for product 2.",
+        "productPrice": 19.99
+      },
+      {
+        "productImg": "https://example.com/product3.jpg",
+        "productName": "Product 3",
+        "productDescription": "This is the description for product 3.",
+        "productPrice": 29.99
+      },
+      {
+        "productImg": "https://example.com/product4.jpg",
+        "productName": "Product 4",
+        "productDescription": "This is the description for product 4.",
+        "productPrice": 39.99
+      },
+      {
+        "productImg": "https://example.com/product5.jpg",
+        "productName": "Product 5",
+        "productDescription": "This is the description for product 5.",
+        "productPrice": 49.99
+      }
+    ]
+  }
+  
