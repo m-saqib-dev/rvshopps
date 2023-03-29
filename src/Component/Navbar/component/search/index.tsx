@@ -1,18 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
-import './index.css';
-const handleClick = (
-  event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-) => {
-  event.preventDefault();
-  alert('asdf');
-};
+
 const Search = () => {
+  const [visible, setVisible] = useState(false);
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    setVisible((current) => !current);
+    event.preventDefault();
+  };
   return (
-    <div className="search">
-      <input type="search" name="search" className="input--search" />
-      <button onClick={handleClick} className="btn btn--search">
-        <FaSearch className="btn__search--icon" />
+    <div className="flex">
+      <input
+        placeholder="Search"
+        type="search"
+        name="search"
+        className={`p-2 h-8 rounded ${visible ? 'visible' : 'hidden'}`}
+      />
+      <button onClick={handleClick} className="p-2 h-8 text-gray-400">
+        <FaSearch />
       </button>
     </div>
   );

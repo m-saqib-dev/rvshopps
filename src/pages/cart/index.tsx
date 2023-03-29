@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { emptyCart, setTotal } from '../../reducers/cartSlice';
 import { useAppDispatch, useAppSelector } from '../../reducers/hooks';
 import CartList from './component/cardList';
-import './index.css';
 
 const Cart = () => {
   const { products, total } = useAppSelector((state) => state.cart);
@@ -32,19 +31,23 @@ const Cart = () => {
     dispatch(emptyCart());
   };
   return (
-    <div className="carts">
-      <div className="cart__container">
-        <div className="cart__header">
-          <h3 className="cart__heading">Shopping Cart</h3>
-          <button className="cart__action" onClick={removeAllHandler}>
-            Remove all
-          </button>
+    <div className="flex justify-center">
+      <div className="absolute w-full h-5/6 text-white p-2 flex justify-center md:w-96  ">
+        <div className="flex flex-col w-11/12 absolute justify-center">
+          <div className="flex justify-between py-5">
+            <h3 className="text-xl font-bold font-sans">Cart</h3>
+            <button className="text-red-600" onClick={removeAllHandler}>
+              Remove all
+            </button>
+          </div>
         </div>
-        {List}
-      </div>
-      <div className="textbtn__container">
-        <div className="text-total">total:{total}</div>
-        <button className="btn btn--checkout">Check Out</button>
+        <div className=" scroll-p-6 self-center flex flex-col w-full absolute h-3/5 overflow-auto">
+          {List}
+        </div>
+        <div className="flex  justify-between px-2 items-center self-end w-11/12">
+          <h1 className="">total:{total}</h1>
+          <button className="p-2 bg-blue-900 rounded-lg">Check Out</button>
+        </div>
       </div>
     </div>
   );

@@ -1,14 +1,11 @@
-// type prop = {
-//   to: string;
-//   label: string;
-//   color: string;
-//   childern:Rea
-// };
-
-const PageLink = ({ children }: any) => {
+const PageLink = ({ className, children }: any) => {
   return (
     <>
-      <li>{children}</li>
+      <li
+        className={`mx-1 flex items-center rounded-sm text-base text-center ${className}`}
+      >
+        {children}
+      </li>
     </>
   );
 };

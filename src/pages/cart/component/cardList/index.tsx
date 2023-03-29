@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import IncrAndDecrementBtn from '../../../../Component/IncandDecButton';
 import { CartProduct } from '../../../../reducers/cartSlice';
-import './index.css';
 const CartList: React.FC<CartProduct> = ({
   id,
   productDescription,
@@ -22,14 +21,13 @@ const CartList: React.FC<CartProduct> = ({
     }
   };
   return (
-    <div className="cart">
-      <img className="cart__img" src={productImg} alt="" />
+    <div className=" text-white text-xs flex items-center justify-between px-2">
+      <img className="h-16" src={productImg} alt="" />
       <div className="text__container">
         <h1 className="cart__name">{productName}</h1>
-        <p className="cart__description">{productDescription}</p>
       </div>
-      <p className="cart__price">Total : {productPrice}</p>
-      <div className="btn__container">
+      <div className="flex flex-col  space-y-2">
+        <p className="">Total : {productPrice}</p>
         <IncrAndDecrementBtn
           onPlusHandler={onPlusHandler}
           onMinusHandler={onMinusHandler}

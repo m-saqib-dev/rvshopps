@@ -1,10 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+text-[seize] :10px;
 
 body {
-  background-color: black;
-  color: white;
+
+    font-size: 10px !important;
 }

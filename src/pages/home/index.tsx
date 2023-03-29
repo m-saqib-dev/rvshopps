@@ -3,7 +3,6 @@ import Card from '../../Component/card';
 import { CartProduct, setCart } from '../../reducers/cartSlice';
 import { useAppDispatch, useAppSelector } from '../../reducers/hooks';
 import { setProduct } from '../../reducers/productSlice';
-import './index.css';
 
 const Home = () => {
   const dispatch = useAppDispatch();
@@ -25,16 +24,6 @@ const Home = () => {
     [dispatch]
   );
 
-  // const cartHandler =(product: CartProduct) ={
-
-  //   try {
-  //     dispatch(setCart(product));
-  //     console.log(pr);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-
-  // };
   const list = products.map((data) => (
     <div className="product__list" key={data.id}>
       <Card
@@ -47,7 +36,7 @@ const Home = () => {
       />
     </div>
   ));
-  return <div>{list}</div>;
+  return <div className="flex flex-wrap justify-center  px-2">{list}</div>;
 };
 const productData = {
   products: [

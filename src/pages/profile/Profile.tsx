@@ -1,5 +1,4 @@
 import { useAppSelector } from '../../reducers/hooks';
-// import './index.css';
 const Profile = () => {
   const { userData } = useAppSelector((state) => state.user);
   return (

@@ -1,5 +1,4 @@
 import { FaMinus, FaMinusCircle, FaPlus, FaPlusCircle } from 'react-icons/fa';
-import './index.css';
 interface ButtonProp {
   qt: number;
   onMinusHandler: () => void;
@@ -11,12 +10,12 @@ const IncrAndDecrementBtn: React.FC<ButtonProp> = ({
   onPlusHandler,
 }) => {
   return (
-    <div className="btn__container">
-      <button className=" btn btn--minus" onClick={onMinusHandler}>
+    <div className="text-xs flex justify-center items-center">
+      <button className="p-1 bg-gray-700 rounded-full" onClick={onMinusHandler}>
         <FaMinus />
       </button>
-      <span className="card__count">{qt}</span>
-      <button className="btn btn--plus" onClick={onPlusHandler}>
+      <span className=" text-center p-1 w-6 h-fit">{qt}</span>
+      <button className="p-1 bg-gray-700 rounded-full" onClick={onPlusHandler}>
         <FaPlus />
       </button>
     </div>

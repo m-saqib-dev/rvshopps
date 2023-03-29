@@ -1,5 +1,3 @@
-// import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import Navbar from './Component/Navbar/Navbar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Profile from './pages/profile/Profile';
@@ -10,7 +8,7 @@ import Cart from './pages/cart';
 
 const App = () => {
   return (
-    <div>
+    <div className="bg-black h-full">
       <Router>
         <Navbar />
         <Routes>

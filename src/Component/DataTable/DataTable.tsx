@@ -1,5 +1,4 @@
 import React from 'react';
-import './datatable.css';
 
 type TableEmployee = {
   id: number;
